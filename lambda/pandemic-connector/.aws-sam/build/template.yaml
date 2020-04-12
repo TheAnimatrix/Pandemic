@@ -34,6 +34,19 @@ Resources:
           Properties:
             Path: /form/submit
             Method: post
+  PhConnectorGetItemsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: PhConnectorGetItemsFunction
+      Handler: app.getVerifiedItems
+      Runtime: nodejs12.x
+      Role: arn:aws:iam::618738189791:role/testCRUD
+      Events:
+        PhConnector:
+          Type: Api
+          Properties:
+            Path: /getVerifiedItems
+            Method: get
 Outputs:
   PhConnectorApi:
     Description: API Gateway endpoint URL for Prod stage for Hello World function

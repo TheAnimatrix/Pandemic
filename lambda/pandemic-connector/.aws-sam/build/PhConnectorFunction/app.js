@@ -157,4 +157,34 @@ exports.getVerifiedItems = async (event, context) => {
         }),
     }
 
+    try{
+
+        //querying for all records with Approved -> T
+        //sorted by Timestamp
+        var params = {
+            TableName: 'PhConnector',
+            IndexName : 'Approved-Timestamp-index',
+            KeyConditionExpression:'Approved = :approved',
+            ExpressionAttributeValues: {
+                ':approved' : 'T'
+            },
+            ScanIndexForward: true
+        };
+
+        var data = await documentClient.query(params).promise();
+
+        console.log("Success", data);
+        response.statusCode = 200;
+        response.body = JSON.stringify(data);
+
+    }catch(err){
+
+        
+        console.log("Error", err);
+        response.statusCode = 505;
+        response.body = JSON.stringify(err);
+
+    }
+
+    return response;
 }

@@ -36,6 +36,19 @@ Resources:
           Properties:
             Path: /form/submit
             Method: post
+  PhConnectorGetItemsFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: PhConnector/
+      Handler: app.getVerifiedItems
+      Runtime: nodejs12.x
+      Role: arn:aws:iam::618738189791:role/testCRUD
+      Events:
+        PhConnector:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /getVerifiedItems
+            Method: get
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function

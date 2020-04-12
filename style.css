@@ -27,8 +27,15 @@ h2{
 .country{
     color: #EDEDED;
 }
+a:link { 
+    text-decoration: none
+    
+} 
+a:hover { 
+    text-decoration: underline; 
+} 
 .spinner{
-    background-color: #B08EFC;
+    background-color: #EF4659;
     color: #EDEDED;
     height: 30px;
     font-size: 14px;
@@ -43,12 +50,13 @@ h2{
     height: 50px;
     color: #828282;
     border-radius: 30px;
+    text-decoration: none;
 }
 .contributer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #B08EFC;
+    background-color: #EF4659;
     color: #EDEDED;
     border-radius: 30px;
     padding: 0 15px  0 15px ;
@@ -59,7 +67,7 @@ h2{
     justify-content: center;
     padding: 20px;
     border-radius: 20px;
-    background-color: #4E4E4E;
+    background-color: rgba(78,78, 78, 0.7);
     margin: 0 auto;
     width: 50%;
 }
@@ -69,7 +77,7 @@ h2{
 }
 .field{
     border:none;
-    border-bottom: #B08EFC 1px solid;
+    border-bottom: #EF4659 1px solid;
     background-color: #4E4E4E;
 
 }
@@ -84,7 +92,8 @@ h2{
     display: flex;
     justify-content: center;
     color: #EDEDED;
-    background-color:#B08EFC ;
+    
+    background-color: #EF4659;
     padding: 20px;
     border-radius: 20px;
 }
@@ -92,7 +101,7 @@ h2{
     margin-left: 20%;
     border:none;
     color:#EDEDED;
-    border-bottom: #B08EFC 1px solid;
+    border-bottom: #EF4659 1px solid;
     background-color: #4E4E4E;
     width: 50%;
 
@@ -106,7 +115,7 @@ h2{
 
 }
 .submit-but{
-    background-color: #B08EFC;
+    background-color: #EF4659;
     padding: 10px;
     border: none;
     border-radius: 20px;
@@ -121,7 +130,7 @@ h2{
 .table{
     display: flex;
     font-family: Source-Sans-Pro; 
-    background-color: #454545;
+    background-color:  rgba(78,78, 78, 0.7);
     margin: 0 auto;
     width:80%;
     padding:10px;

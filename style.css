@@ -120,7 +120,7 @@ h2{
 }
 .table{
     display: flex;
-    justify-content: stretch;
+   
     background-color: #454545;
     margin: 0 auto;
     width:80%;
@@ -179,6 +179,7 @@ textarea {
      
  }
  .table{
+     
      width: auto;
      margin:0 10px 0 10px;
  }

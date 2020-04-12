@@ -38,3 +38,7 @@ jQuery(document).ready(function() {
         return true;
     });
 });
+
+document.getElementById("sub").onclick = function () {
+    location.href = "thankyou.html";
+};

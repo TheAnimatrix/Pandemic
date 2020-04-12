@@ -73,6 +73,21 @@ h2{
     background-color: #4E4E4E;
 
 }
+.thank-head{
+    color: #EDEDED;
+    display: flex;
+    justify-content: center;
+}
+.thank-para{
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    color: #EDEDED;
+    background-color:#B08EFC ;
+    padding: 20px;
+    border-radius: 20px;
+}
 .field2{
     margin-left: 20%;
     border:none;
@@ -105,7 +120,7 @@ h2{
 }
 .table{
     display: flex;
-    justify-content: center;
+    justify-content: stretch;
     background-color: #454545;
     margin: 0 auto;
     width:80%;
@@ -127,9 +142,11 @@ td {
   .trm{
       border-right:none;
   }
-  table {
   
+  table {
+    overflow-x: auto;
     border-collapse: collapse;
+    border-spacing: 0;
     width: 100%;
   }
   input{
@@ -167,5 +184,8 @@ textarea {
  }
  .country,.contributer,.verified{
      margin-top: 10px;
+ }
+ .thank-para{
+     width: 80%;
  }
 }

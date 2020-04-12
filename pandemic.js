@@ -30,6 +30,7 @@ jQuery(document).ready(function() {
             dataType: "json",
             contentType:"text/plain"
         }).done(function() { 
+           location.href = "thankyou.html";
            console.log("posted")
         }).fail(function() { 
             alert("Failed to add to-do"); 
@@ -39,6 +40,3 @@ jQuery(document).ready(function() {
     });
 });
 
-document.getElementById("sub").onclick = function () {
-    location.href = "thankyou.html";
-};

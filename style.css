@@ -120,7 +120,7 @@ h2{
 }
 .table{
     display: flex;
-   
+    font-family: Source-Sans-Pro; 
     background-color: #454545;
     margin: 0 auto;
     width:80%;
@@ -131,11 +131,13 @@ h2{
 
 }
 td {
+    font-family: Source-Sans-Pro; 
     border-right: #5B5B5B 1px solid;
     text-align: left;
     padding: 8px;
   }
   th{
+    font-family: Source-Sans-Pro; 
     text-align: left;
     padding: 8px;
   }

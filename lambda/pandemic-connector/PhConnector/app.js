@@ -157,6 +157,12 @@ exports.getVerifiedItems = async (event, context) => {
         }),
     }
 
+    response["headers"] = {
+        'Content-Type': 'application/json', 
+        'Access-Control-Allow-Origin': '*' 
+    }
+
+
     try{
 
         //querying for all records with Approved -> T

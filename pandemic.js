@@ -39,6 +39,7 @@ jQuery(document).ready(function() {
             dataType: "json",
             contentType:"text/plain"
         }).done(function() { 
+            location.href='thankyou.html';
            console.log("posted")
         }).fail(function() { 
             alert("Failed to add to-do"); 

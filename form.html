@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
@@ -15,83 +16,100 @@
 </head>
 
 <body>
-<div class="head-container">
+  <div class="head-container">
     <div class="head tilt-in-fwd-tl">
-        <h2>PANDEMIC HELP CONNECTOR</h2>
+      <h2>PANDEMIC HELP CONNECTOR</h2>
     </div>
-</div>
+  </div>
 
-<div class="options tilt-in-fwd-tl" style="animation-delay: 0.45s;">
+  <div class="options tilt-in-fwd-tl" style="animation-delay: 0.45s;">
     <div class="country">
-        <h3>Country:INDIA</h3>
+      <h3>Country:INDIA</h3>
     </div>
     <div class="contributer">
-        <h3>Become a Contributor</h3>
+      <h4>Become a Contributor</h4>
     </div>
     <button class="click-verified verified" onClick="clickVerified()">
-      <h3>Verified contributors </h3>
+      <h4>Verified contributors</h4>
     </button>
 
-</div>
-<div class="form tilt-in-fwd-tl" style="animation-delay: 0.9s;">
-<form id="createData"> 
-    <br>
-    <label class="text" for="What">What can you contribute?</label> <br><br>
-    <select class="spinner" name="what" id="contri">
-        <option value="Medical Devices">Medical Devices</option>
-        <option value="PPE">PPE</option>
-        <option value="3D-printing">3d Printing</option>
-        <option value="Lazer Cutting">Lazer Cutting</option>
-        <option value="CNC">CNC</option>
-        <option value="Manufacturing Assistance">Manufaturing Assistance</option>
-        <option value="hand Sanitizers">Hand Sanitizers</option>
-        <option value="medicines">Medicines</option>
-      </select>
-   <br>
-    <br>
-    <label class="text" for="quantity">What is the quantity?</label> <br><br>
-    <select class="spinner" name="Quantity" id="quant">
-        <option value="NA">Not Applicable</option>
-        <option value="0-50">0-50</option>
-        <option value="50-100">50-100</option>
-        <option value="100+">100+</option>
-       
-      </select>
-    <br>
-    <br>
-    <label class="text" for="contribute">description of your item/service</label> <br>
-    <textarea class="field"rows="3" cols="60" name="Description"
-                        id="contribute"></textarea>   <br>
-       <br>                 
-    <label class="text" for="contribute">Where can you contribute?</label> <br>
-    <textarea class="field" rows="3" cols="60" name="where"
-    id="contribute"></textarea>          <br>
-    <br>
-    <div class="contact-head">
-    <h2>contact info:</h2>  
-    </div>    
-    <div class="contact">
-    <label class="text" for="cno">contact no.</label>
-    <input class="field2" type="number" id="cno" name="contact"><br>  
-    </div><br>
-    <div class="contact">
-  <label class="text" for="EMAILID">e-mail</label>
-        <input  class="field2" type="text" name="email" id="Email id"> <br>
-        </div><br>
-        <div class="contact">
-    <label class="text" for="fname">name</label>
-  <input class="field2"  type="text" id="fname" name="name"><br>
   </div>
-  <br>
-  <br>
-  <div class="submit">
-  <input type="submit" id="sub" class="submit-but" value="Submit">
-  </div>
+  <div class="form tilt-in-fwd-tl" style="animation-delay: 0.9s;">
+    <form id="createData">
+      <br>
+      <label class="text" for="What">What can you contribute?</label> <br><br>
+      <div class="container">
+        <div class="dropdown">
+          <div class="select">
+            <span>Select Item/Service</span>
+            <i class="fa fa-chevron-left"></i>
+          </div>
+          <input type="hidden" name="what" value="other">
+          <ul class="dropdown-menu">
+            <li value="Medical Devices">Medical Devices</li>
+            <li value="PPE">Personal Protection Equipment</li>
+            <li value="3D-printing">3d Printing</li>
+            <li value="Lazer Cutting">Lazer Cutting</li>
+            <li value="CNC">CNC</li>
+            <li value="Manufacturing Assistance">Manufaturing Assistance</li>
+            <li value="hand Sanitizers">Hand Sanitizers</li>
+            <li value="medicines">Medicines</li>
+            <li value="other">Other</li>
+          </ul>
+        </div>
 
-</form> 
-</div>
-<script type="text/javascript" src="pandemic.js"></script>
-<script type="text/javascript" src="fetch.js"></script>
-<script type="text/javascript" src="corona.js"></script>
+        <span class="msg"></span>
+        <br>
+        <br>
+        <label class="text" for="quantity">What is the quantity?</label> <br><br>
+        <div class="container">
+          <div class="dropdown" name="Quantity" id="quant">
+            <div class="select">
+              <span>Select Quantity</span>
+              <i class="fa fa-chevron-left"></i>
+            </div>
+            <input type="hidden" name="Quantity" value="NA">
+            <ul class="dropdown-menu">
+              <li value="NA">Not Applicable</li>
+              <li value="0-50">0-50</li>
+              <li value="50-100">50-100</li>
+              <li value="100+">100+</li>
+            </ul>
+          </div>
+          <br>
+          <br>
+          <label class="text" for="contribute">description of your item/service</label> <br>
+          <textarea class="field" rows="3" cols="60" name="Description" id="contribute"></textarea> <br>
+          <br>
+          <label class="text" for="contribute">Where can you contribute?</label> <br>
+          <textarea class="field" rows="3" cols="60" name="where" id="contribute"></textarea> <br>
+          <br>
+          <div class="contact-head">
+            <h2>contact info:</h2>
+          </div>
+          <div class="contact">
+            <label class="text" for="cno">contact no.</label>
+            <input class="field2" type="number" id="cno" name="contact"><br>
+          </div><br>
+          <div class="contact">
+            <label class="text" for="EMAILID">e-mail</label>
+            <input class="field2" type="text" name="email" id="Email id"> <br>
+          </div><br>
+          <div class="contact">
+            <label class="text" for="fname">name</label>
+            <input class="field2" type="text" id="fname" name="name"><br>
+          </div>
+          <br>
+          <br>
+          <div class="submit">
+            <input type="submit" id="sub" class="submit-but" value="Submit">
+          </div>
+
+    </form>
+  </div>
+  <script type="text/javascript" src="pandemic.js"></script>
+  <script type="text/javascript" src="fetch.js"></script>
+  <script type="text/javascript" src="corona.js"></script>
 </body>
+
 </html>

@@ -13,6 +13,14 @@ console.log("test");
 
 jQuery(document).ready(function() {
 
+    $('.click-verified').click(function(){
+        location.href = "table.html";
+    });
+
+    $('click-contributor').click(function(){
+        location.href = "form.html";
+    });
+
 
     console.log("Ready");
     $('form#createData').bind('submit', function(event){

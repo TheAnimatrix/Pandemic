@@ -11,16 +11,17 @@ function ConvertFormToJSON(form){
 
 console.log("test");
 
+function clickVerified()
+{
+    location.href='table.html';
+}
+
+function clickContributor()
+{
+    location.href='form.html';
+}
+
 jQuery(document).ready(function() {
-
-    $('.click-verified').click(function(){
-        location.href = "table.html";
-    });
-
-    $('click-contributor').click(function(){
-        location.href = "form.html";
-    });
-
 
     console.log("Ready");
     $('form#createData').bind('submit', function(event){
